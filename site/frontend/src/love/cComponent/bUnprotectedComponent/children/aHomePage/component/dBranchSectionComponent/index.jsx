@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 
 function BranchSectionComponent({ Redux }) {
-  const [activeBranchGroup, setActiveBranchGroup] = useState("Andromeda Organisation")
+  const [activeBranchGroup, setActiveBranchGroup] = useState("Acrux Enterprise")
 
   return (
     Redux.state.ReceivedObject?.Retrieve?.BranchRetrieve &&    

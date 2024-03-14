@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 
 function ProjectSectionComponent({ Redux }) {
-  const [activeProjectGroup, setActiveProjectGroup] = useState("Andromeda Organisation")
+  const [activeProjectGroup, setActiveProjectGroup] = useState("Acrux Enterprise")
 
   return (
     Redux.state.ReceivedObject?.Retrieve?.ProjectSectionRetrieve &&  
