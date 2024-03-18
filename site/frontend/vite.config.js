@@ -12,8 +12,8 @@ export default defineConfig({
         "name":"Andromeda Organisation",
         "short_name":"Andromeda",
         "display": "standalone",
-        "background_color": "#071952",
-        "theme_color": "#071952",
+        "background_color": "#A4193D",
+        "theme_color": "#A4193D",
         "icons":[
           {
             src: "Business/Andromeda/favicon_io/android-chrome-512x512.png",
