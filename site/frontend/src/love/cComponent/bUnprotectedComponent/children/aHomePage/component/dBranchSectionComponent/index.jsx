@@ -6,7 +6,7 @@ import { GitHubLogoIcon } from "@radix-ui/react-icons"
 
 
 function BranchSectionComponent({ Redux }) {
-  const [activeBranchGroup, setActiveBranchGroup] = useState("Acrux Enterprise")
+  const [activeBranchGroup, setActiveBranchGroup] = useState("Andromeda Organisation")
 
   return (
     Redux.state.ReceivedObject?.Retrieve?.BranchRetrieve &&    
@@ -21,7 +21,7 @@ function BranchSectionComponent({ Redux }) {
           </div>          
 
           <div className="flex mx-auto justify-center mb-10">
-            <ScrollArea className="w-96 lg:w-2/3 whitespace-nowrap rounded-md">
+            <ScrollArea className="w-80 lg:w-2/3 whitespace-nowrap rounded-md">
               {Redux.state.ReceivedObject?.Retrieve?.BranchRetrieve?.subBranches?.map((each, index) => (
                 <a 
                   key={index}
@@ -102,7 +102,7 @@ function BranchSectionComponent({ Redux }) {
         </div>
       </section>
 
-      <Separator/>
+      <Separator className="bg-[#A4193D] dark:bg-[#FFDFB9]" />
     </React.Fragment>
   );
 }

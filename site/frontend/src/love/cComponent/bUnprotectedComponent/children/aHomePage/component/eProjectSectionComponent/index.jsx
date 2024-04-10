@@ -1,8 +1,8 @@
 import { Separator } from "@/components/ui/separator";
 import React, { useState } from "react";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
-import { Link } from "react-router-dom";
 import { GitHubLogoIcon } from "@radix-ui/react-icons"
+import { Link } from "react-router-dom";
 
 
 function ProjectSectionComponent({ Redux }) {
@@ -21,7 +21,7 @@ function ProjectSectionComponent({ Redux }) {
           </div>          
 
           <div className="flex mx-auto mb-10 justify-center">
-            <ScrollArea className="w-96 lg:w-2/3 whitespace-nowrap rounded-md">
+            <ScrollArea className="w-80 lg:w-2/3 whitespace-nowrap rounded-md">
               {Redux.state.ReceivedObject?.Retrieve?.ProjectSectionRetrieve?.projectGroups?.map((each, index) => (
                 <a 
                   key={index}
@@ -102,7 +102,7 @@ function ProjectSectionComponent({ Redux }) {
         </div>
       </section>
 
-      <Separator/>
+      {/* <Separator className="bg-[#A4193D] dark:bg-[#FFDFB9]" /> */}
     </React.Fragment>
   );
 }
