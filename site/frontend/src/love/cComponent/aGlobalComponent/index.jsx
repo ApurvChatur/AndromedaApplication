@@ -13,7 +13,9 @@ const GlobalComponent = ({ Redux, LogoutAPICall, children }) => {
       <Suspense fallback={null}>
         <HeaderComponent Redux={Redux} LogoutAPICall={LogoutAPICall} />
       </Suspense>
-      { children }
+      <div className='min-h-screen bg-[#FFDFB9] dark:bg-[#A4193D] text-[#A4193D] dark:text-[#FFDFB9]'>
+        { children }
+      </div>
       <Suspense fallback={null}>
         <FooterComponent Redux={Redux} />
       </Suspense>

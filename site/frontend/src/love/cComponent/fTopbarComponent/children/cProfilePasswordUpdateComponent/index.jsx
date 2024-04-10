@@ -14,11 +14,11 @@ const ProfilePasswordUpdateComponent = ({ Redux, OnClick }) => {
         <div class="container px-5 py-12 mx-auto flex flex-col">
           <div class="lg:w-4/6 mx-auto">
             <div class="rounded-lg h-64 overflow-hidden">
-              <img alt="content" class="object-cover object-center h-full w-full" src={Redux.state.ReceivedObject?.Retrieve?.coverImage?.url || "https://dummyimage.com/1200x500"} />
+              <img alt="content" class="object-cover object-center h-full w-full" src={Redux.state.ReceivedObject?.Retrieve?.coverImage?.url || "https://picsum.photos/seed/picsum/1200/500"} />
             </div>
             <div class="flex flex-col sm:flex-row mt-10">
               <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
-                <div class="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-800 text-gray-600">
+                <div class="w-20 h-20 rounded-full inline-flex items-center justify-center bg-[#A4193D] dark:bg-[#FFDFB9] text-[#FFDFB9] dark:text-[#A4193D]">
                   {Redux.state.ReceivedObject?.Retrieve?.image ? 
                     <img alt="content" className="object-cover object-center rounded-full" src={Redux.state.ReceivedObject?.Retrieve?.image?.url} />
                     :
@@ -37,29 +37,42 @@ const ProfilePasswordUpdateComponent = ({ Redux, OnClick }) => {
                   <p class="text-base">{Redux.state.ReceivedObject?.Retrieve?.subtitle}</p>
                 </div>
               </div>
-              <div class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-800 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
+              <div class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-[#A4193D] dark:border-[#FFDFB9] sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
                 <p class="leading-relaxed text-lg mb-4">{Redux.state.ReceivedObject?.Retrieve?.description}</p>
-                <Link to={FinalRouteName.ContentRoute.TopbarRoute.ProfileUpdateRoute} class="inline-flex items-center">Edit This Shit
-                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                    <path d="M5 12h14M12 5l7 7-7 7"></path>
-                  </svg>
-                </Link>
+                <Button asChild variant="custom" >
+                  <Link to={FinalRouteName.ContentRoute.TopbarRoute.ProfileUpdateRoute}>
+                    Edit Profile
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                      <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>                  
+                  </Link>
+                </Button>              
               </div>
             </div>
           </div>
         </div>
-        <Separator />
+        <Separator className="bg-[#A4193D] dark:bg-[#FFDFB9]" />
         <div class="container px-5 py-12 mx-auto">
           <div class="flex flex-wrap -m-4">
             <div class="p-4 xl:w-full md:w-1/2 w-full">
-              <div class="h-full p-6 rounded-lg border-2 border-[#A4193D] dark:border-[#FFDFB9] flex flex-col relative overflow-hidden">
+              <div class="h-full p-6 rounded-lg border border-[#A4193D] dark:border-[#FFDFB9] flex flex-col relative overflow-hidden">
                 <h1 class="text-2xl pb-4 mb-4 border-b border-[#A4193D] dark:border-[#FFDFB9] leading-none">Critical Information</h1>
                 
                 <div className="w-full mb-2">
                   <div className="relative">
                     <label className="leading-7 text-sm">Old Password</label>
                     <input 
-                      className="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" 
+                      className="w-full bg-[#FFDFB9] dark:bg-[#A4193D] bg-opacity-40 rounded border 
+                        border-[#A4193D] dark:border-[#FFDFB9]
+                        focus:border-[#FFDFB9] dark:focus:border-[#A4193D] 
+                        focus:bg-[#A4193D] dark:focus:bg-[#FFDFB9] 
+                        focus:text-[#FFDFB9] dark:focus:text-[#A4193D] 
+                        focus:ring-2 
+                        focus:ring-[#A4193D] dark:focus:ring-[#FFDFB9] 
+                        text-[#A4193D] dark:text-[#FFDFB9] 
+                        text-base outline-none 
+                        py-1 px-3 leading-8 transition-colors duration-200 ease-in-out
+                      " 
                       type='password' 
                       name='oldPassword'
                       label='Old Password'
@@ -75,7 +88,17 @@ const ProfilePasswordUpdateComponent = ({ Redux, OnClick }) => {
                   <div className="relative">
                     <label className="leading-7 text-sm">New Password</label>
                     <input 
-                      className="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" 
+                      className="w-full bg-[#FFDFB9] dark:bg-[#A4193D] bg-opacity-40 rounded border 
+                        border-[#A4193D] dark:border-[#FFDFB9]
+                        focus:border-[#FFDFB9] dark:focus:border-[#A4193D] 
+                        focus:bg-[#A4193D] dark:focus:bg-[#FFDFB9] 
+                        focus:text-[#FFDFB9] dark:focus:text-[#A4193D] 
+                        focus:ring-2 
+                        focus:ring-[#A4193D] dark:focus:ring-[#FFDFB9] 
+                        text-[#A4193D] dark:text-[#FFDFB9] 
+                        text-base outline-none 
+                        py-1 px-3 leading-8 transition-colors duration-200 ease-in-out
+                      " 
                       type='password' 
                       name='newPassword'
                       label='New Password'
@@ -91,7 +114,17 @@ const ProfilePasswordUpdateComponent = ({ Redux, OnClick }) => {
                   <div className="relative">
                     <label className="leading-7 text-sm">Confirm Password</label>
                     <input 
-                      className="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" 
+                      className="w-full bg-[#FFDFB9] dark:bg-[#A4193D] bg-opacity-40 rounded border 
+                        border-[#A4193D] dark:border-[#FFDFB9]
+                        focus:border-[#FFDFB9] dark:focus:border-[#A4193D] 
+                        focus:bg-[#A4193D] dark:focus:bg-[#FFDFB9] 
+                        focus:text-[#FFDFB9] dark:focus:text-[#A4193D] 
+                        focus:ring-2 
+                        focus:ring-[#A4193D] dark:focus:ring-[#FFDFB9] 
+                        text-[#A4193D] dark:text-[#FFDFB9] 
+                        text-base outline-none 
+                        py-1 px-3 leading-8 transition-colors duration-200 ease-in-out
+                      " 
                       type='password' 
                       name='confirmPassword'
                       label='Confirm Password'
@@ -107,7 +140,7 @@ const ProfilePasswordUpdateComponent = ({ Redux, OnClick }) => {
             </div>
           </div>
 
-          <Button className="mt-8" onClick={OnClick}>
+          <Button variant="custom" className="mt-8" onClick={OnClick}>
             Update Profile Password
           </Button>
         </div>
