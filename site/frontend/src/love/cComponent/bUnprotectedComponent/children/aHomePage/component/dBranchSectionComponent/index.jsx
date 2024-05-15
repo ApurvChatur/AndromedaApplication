@@ -6,7 +6,7 @@ import { GitHubLogoIcon } from "@radix-ui/react-icons"
 
 
 function BranchSectionComponent({ Redux }) {
-  const [activeBranchGroup, setActiveBranchGroup] = useState("Andromeda Organisation")
+  const [activeBranchGroup, setActiveBranchGroup] = useState("Acrux Enterprise")
 
   return (
     Redux.state.ReceivedObject?.Retrieve?.BranchRetrieve &&    
