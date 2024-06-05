@@ -39,9 +39,6 @@ const ProfileDeletePage = React.lazy(() => import('@/love/fPage/fTopbarPage/dPro
 // Sidebar Page
 const ChatPage = React.lazy(() => import('@/love/fPage/gSidebarPage/aChatPage'));
 
-// Sidebar Page
-const ChatPage = React.lazy(() => import('@/love/fPage/gSidebarPage/aChatPage'));
-
 
 function App() {
   // Redux
